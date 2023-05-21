@@ -41,26 +41,6 @@ public class GenTable extends BaseEntity
     /** 使用的模板（crud单表操作 tree树表操作 sub主子表操作） */
     private String tplCategory;
 
-    /** 生成包路径 */
-    @NotBlank(message = "生成包路径不能为空")
-    private String packageName;
-
-    /** 生成模块名 */
-    @NotBlank(message = "生成模块名不能为空")
-    private String moduleName;
-
-    /** 生成业务名 */
-    @NotBlank(message = "生成业务名不能为空")
-    private String businessName;
-
-    /** 生成功能名 */
-    @NotBlank(message = "生成功能名不能为空")
-    private String functionName;
-
-    /** 生成作者 */
-    @NotBlank(message = "作者不能为空")
-    private String functionAuthor;
-
     /** 生成代码方式（0zip压缩包 1自定义路径） */
     private String genType;
 
