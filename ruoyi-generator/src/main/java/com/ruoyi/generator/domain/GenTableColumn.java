@@ -40,6 +40,26 @@ public class GenTableColumn extends BaseEntity
 
     /** 是否自增（1是） */
     private String isIncrement;
+    
+        /** 生成包路径 */
+    @NotBlank(message = "生成包路径不能为空")
+    private String packageName;
+
+    /** 生成模块名 */
+    @NotBlank(message = "生成模块名不能为空")
+    private String moduleName;
+
+    /** 生成业务名 */
+    @NotBlank(message = "生成业务名不能为空")
+    private String businessName;
+
+    /** 生成功能名 */
+    @NotBlank(message = "生成功能名不能为空")
+    private String functionName;
+
+    /** 生成作者 */
+    @NotBlank(message = "作者不能为空")
+    private String functionAuthor;
 
     /** 是否必填（1是） */
     private String isRequired;
