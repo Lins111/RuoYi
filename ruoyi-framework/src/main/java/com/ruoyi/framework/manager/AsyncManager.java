@@ -34,6 +34,19 @@ public class AsyncManager
     {
         return me;
     }
+    
+    public DynamicDataSource(DataSource defaultTargetDataSource, Map<Object, Object> targetDataSources)
+    {
+        super.setDefaultTargetDataSource(defaultTargetDataSource);
+        super.setTargetDataSources(targetDataSources);
+        super.afterPropertiesSet();
+    }
+
+    @Override
+    protected Object determineCurrentLookupKey()
+    {
+        return DynamicDataSourceContextHolder.getDataSourceType();
+    }
 
     /**
      * 执行任务
